@@ -1,2 +1,9 @@
 # Claude Code local state
 .claude/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.log
+.env*.local
