@@ -16,7 +16,7 @@ export default function Home() {
         <Reveal from="left"><About /></Reveal>
         <Reveal from="right"><Skills /></Reveal>
         <Reveal from="left"><Experience /></Reveal>
-        <Reveal from="right"><Contact /></Reveal>
+        <Contact />
       </main>
       <Footer />
     </>
