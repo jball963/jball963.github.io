@@ -10,7 +10,7 @@ const PROJECTS = [
   },
   {
     slug: "infrastructure-consolidation",
-    title: "Internal Web App — Infrastructure Consolidation",
+    title: "Internal Web App: Infrastructure Consolidation",
     summary:
       "Re-architected an internal CRM from a three-vendor stack (Azure / Cloudflare / Firebase) onto a single provider for DNS, hosting, database, and file storage. Surfaced an unexpected cost win along the way.",
     stack: ["Node.js", "DigitalOcean", "Cloud architecture"],

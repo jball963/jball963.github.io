@@ -10,12 +10,12 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Joseph Ball — Full-Stack Software Developer",
+  title: "Joseph Ball | Full-Stack Software Developer",
   description:
-    "Joseph Ball — full-stack software developer in Altoona, PA. Builds and owns production Node.js and C#/.NET applications end-to-end.",
+    "Joseph Ball, full-stack software developer in Altoona, PA. Builds and owns production Node.js and C#/.NET applications end-to-end.",
   authors: [{ name: "Joseph Ball" }],
   openGraph: {
-    title: "Joseph Ball — Full-Stack Software Developer",
+    title: "Joseph Ball | Full-Stack Software Developer",
     description:
       "Full-stack developer with hands-on experience building and owning production systems end-to-end.",
     url: "https://jball963.github.io/",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Joseph Ball — Full-Stack Software Developer",
+    title: "Joseph Ball | Full-Stack Software Developer",
     description:
       "Full-stack developer with hands-on experience building and owning production systems end-to-end.",
   },

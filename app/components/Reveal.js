@@ -38,7 +38,7 @@ export default function Reveal({ children, from = "left" }) {
       );
 
       // Bottom-of-page guard: at certain viewport sizes, the last sections
-      // can't scroll high enough for rect.top to reach SLIDE_END * vh — so
+      // can't scroll high enough for rect.top to reach SLIDE_END * vh, so
       // they'd hang partially translated forever. As the user approaches the
       // bottom of the document (within one viewport height), blend the
       // natural factor toward 0 so every section settles cleanly into view.

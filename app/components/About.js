@@ -3,10 +3,10 @@ export default function About() {
     <section id="about" className="section">
       <h2>About</h2>
       <p>
-        Full-stack developer with hands-on experience building and owning production systems end-to-end — from greenfield web applications to inherited desktop codebases shipped to production. Comfortable working independently across the full stack: backend logic, database design, cloud infrastructure, and deployment. Self-directed in learning new tools and establishing efficient development workflows.
+        Full-stack developer with hands-on experience building and owning production systems end-to-end, from greenfield web applications to inherited desktop codebases shipped to production. Comfortable working independently across the full stack: backend logic, database design, cloud infrastructure, and deployment. Self-directed in learning new tools and establishing efficient development workflows.
       </p>
       <p className="about-credential">
-        Associate of Science — Computer Programming · Pittsburgh Technical College · 2024
+        Associate of Science in Computer Programming · Pittsburgh Technical College · 2024
       </p>
     </section>
   );

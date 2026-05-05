@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Time-Tracking Data Migration Tool — Joseph Ball",
+  title: "Time-Tracking Data Migration Tool | Joseph Ball",
   description:
     "Case study: WPF utility for migrating time-tracking data from a legacy third-party product into our SQL Server schema.",
 };
@@ -48,7 +48,7 @@ export default function MigrationToolCaseStudy() {
           <li>
             All-local deployment model (desktop app against a local SQL Server
             on the customer&apos;s machine), so the migration had to run on-site
-            against their own database — not as a cloud job.
+            against their own database, not as a cloud job.
           </li>
         </ul>
       </section>
@@ -98,8 +98,8 @@ export default function MigrationToolCaseStudy() {
           inserts were minutes.
         </p>
         <p>
-          <strong>Trade-off:</strong> less granular per-record error logging —
-          chosen consciously.
+          <strong>Trade-off:</strong> less granular per-record error logging.
+          Chosen consciously.
         </p>
       </section>
 
@@ -125,7 +125,7 @@ export default function MigrationToolCaseStudy() {
           Tested against dozens of legacy backups; deployed live to a handful
           of customers before the migration logic was folded into our main
           application as an in-product step. The standalone utility is now
-          archived — which was the right outcome.
+          archived, which was the right outcome.
         </p>
         <p>
           <strong>Lesson:</strong> shipping the standalone tool first was the

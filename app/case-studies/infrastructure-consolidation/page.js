@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Internal Web App Infrastructure Consolidation — Joseph Ball",
+  title: "Internal Web App Infrastructure Consolidation | Joseph Ball",
   description:
     "Case study: re-architected an internal CRM from a three-vendor cloud stack onto a single provider for DNS, hosting, database, and file storage.",
 };
@@ -15,7 +15,7 @@ export default function InfrastructureConsolidationCaseStudy() {
 
       <header className="case-study-header">
         <p className="case-study-eyebrow">Case study</p>
-        <h1>Internal Web App — Infrastructure Consolidation</h1>
+        <h1>Internal Web App: Infrastructure Consolidation</h1>
         <ul className="case-study-stack">
           <li>Node.js</li>
           <li>DigitalOcean</li>
@@ -29,7 +29,7 @@ export default function InfrastructureConsolidationCaseStudy() {
           Internal CRM-style tool that started on a patchwork of three cloud
           vendors. Re-architected the whole stack onto a single provider for
           DNS, hosting, database, and file storage. One dashboard, one bill,
-          one place to make a change. Cost ended up lower too — partly by
+          one place to make a change. Cost ended up lower too, partly by
           accident.
         </p>
       </section>
@@ -48,10 +48,10 @@ export default function InfrastructureConsolidationCaseStudy() {
       <section>
         <h2>Before</h2>
         <ul className="kv-list">
-          <li><strong>DNS</strong> — Cloudflare</li>
-          <li><strong>Static hosting</strong> — Firebase</li>
-          <li><strong>Database</strong> — Azure SQL</li>
-          <li><strong>File storage</strong> — split across Azure / Firebase</li>
+          <li><strong>DNS:</strong> Cloudflare</li>
+          <li><strong>Static hosting:</strong> Firebase</li>
+          <li><strong>Database:</strong> Azure SQL</li>
+          <li><strong>File storage:</strong> split across Azure / Firebase</li>
         </ul>
         <p>Four dashboards, four billing lines, four credential sets.</p>
       </section>
@@ -60,7 +60,7 @@ export default function InfrastructureConsolidationCaseStudy() {
         <h2>After</h2>
         <p>
           DNS, app server, managed database, and object storage all on
-          DigitalOcean — single account, single bill, single set of access
+          DigitalOcean: single account, single bill, single set of access
           controls.
         </p>
       </section>
@@ -74,8 +74,8 @@ export default function InfrastructureConsolidationCaseStudy() {
           </li>
           <li>
             Cross-vendor changes (cert renewals, DNS edits during a deploy,
-            credential rotation) used to need coordination across panels — now
-            one panel.
+            credential rotation) used to need coordination across panels.
+            Now one panel.
           </li>
           <li>
             Cost legibility: one invoice, one place to see what&apos;s spent.
@@ -87,7 +87,7 @@ export default function InfrastructureConsolidationCaseStudy() {
         <h2>What it actually cost (a story)</h2>
         <p>
           I kept the old Azure SQL up briefly as a fallback during the
-          transition — wasn&apos;t using it, just hadn&apos;t torn it down yet.
+          transition (wasn&apos;t using it, just hadn&apos;t torn it down yet).
           Within a couple of months the monthly bill on that idle database
           jumped from roughly $5–15 to ~$60 with no usage change on my end.
         </p>
