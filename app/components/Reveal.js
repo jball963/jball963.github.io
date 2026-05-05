@@ -28,8 +28,26 @@ export default function Reveal({ children, from = "left" }) {
     const compute = () => {
       const rect = node.getBoundingClientRect();
       const vh = window.innerHeight;
+
+      // Natural factor: how much the section should be slid based on its
+      // vertical position in the viewport. 1 = fully off-side, 0 = in place.
       const t = rect.top / vh;
-      const factor = Math.max(0, Math.min(1, (t - SLIDE_END) / SLIDE_RANGE));
+      const naturalFactor = Math.max(
+        0,
+        Math.min(1, (t - SLIDE_END) / SLIDE_RANGE)
+      );
+
+      // Bottom-of-page guard: at certain viewport sizes, the last sections
+      // can't scroll high enough for rect.top to reach SLIDE_END * vh — so
+      // they'd hang partially translated forever. As the user approaches the
+      // bottom of the document (within one viewport height), blend the
+      // natural factor toward 0 so every section settles cleanly into view.
+      const docHeight = document.documentElement.scrollHeight;
+      const maxScroll = Math.max(0, docHeight - vh);
+      const distFromBottom = maxScroll - window.scrollY;
+      const bottomFactor = Math.max(0, Math.min(1, distFromBottom / vh));
+
+      const factor = naturalFactor * bottomFactor;
       setOffset(MAX_OFFSET * factor);
     };
 
