@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <main>
-        <Reveal from="left"><About /></Reveal>
+        <About />
         <Reveal from="right"><Skills /></Reveal>
         <Reveal from="left"><Experience /></Reveal>
         <Reveal from="right"><Projects /></Reveal>
