@@ -1,7 +1,7 @@
-const SKILL_GROUPS = [
+const PRIMARY_GROUPS = [
   {
     title: "Languages",
-    items: ["C#", "JavaScript", "Node.js", "SQL", "XAML"],
+    items: ["C#", "JavaScript", "Node.js", "SQL", "T-SQL", "XAML"],
   },
   {
     title: "Frameworks & Platforms",
@@ -9,32 +9,56 @@ const SKILL_GROUPS = [
   },
   {
     title: "Databases",
-    items: ["SQL Server", "Azure SQL", "T-SQL"],
+    items: ["SQL Server", "PostgreSQL"],
   },
   {
     title: "Cloud & Infrastructure",
-    items: ["DigitalOcean", "Firebase Hosting", "Azure", "Cloudflare (DNS)"],
+    items: ["DigitalOcean"],
   },
   {
     title: "Tools & Practices",
-    items: ["Visual Studio", "VS Code", "Git / GitHub", "REST APIs", "MVVM pattern"],
+    items: [
+      "Visual Studio",
+      "VS Code",
+      "Git / GitHub",
+      "REST APIs",
+      "MVVM pattern",
+    ],
   },
 ];
+
+const LEGACY_ITEMS = ["Azure", "Azure SQL", "Firebase Hosting", "Cloudflare (DNS)"];
 
 export default function Skills() {
   return (
     <section id="skills" className="section">
       <h2>Skills</h2>
-      {SKILL_GROUPS.map((group) => (
-        <div key={group.title}>
-          <h3>{group.title}</h3>
-          <ul className="skills-list">
-            {group.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+
+      <div className="skills-tier">
+        <p className="skills-tier-label">Currently building with</p>
+        {PRIMARY_GROUPS.map((group) => (
+          <div key={group.title}>
+            <h3>{group.title}</h3>
+            <ul className="skills-list">
+              {group.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className="skills-tier">
+        <p className="skills-tier-label">Worked with in production</p>
+        <p className="skills-tier-note">
+          Previously used, since consolidated onto DigitalOcean.
+        </p>
+        <ul className="skills-list">
+          {LEGACY_ITEMS.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
