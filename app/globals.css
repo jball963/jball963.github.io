@@ -35,19 +35,27 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ─── Reveal-on-scroll ─── */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
   transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
   will-change: opacity, transform;
 }
 
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
 .reveal-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 @media (prefers-reduced-motion: reduce) {

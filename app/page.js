@@ -13,10 +13,10 @@ export default function Home() {
       <Nav />
       <Hero />
       <main>
-        <Reveal><About /></Reveal>
-        <Reveal><Skills /></Reveal>
-        <Reveal><Experience /></Reveal>
-        <Reveal><Contact /></Reveal>
+        <Reveal from="left"><About /></Reveal>
+        <Reveal from="right"><Skills /></Reveal>
+        <Reveal from="left"><Experience /></Reveal>
+        <Reveal from="right"><Contact /></Reveal>
       </main>
       <Footer />
     </>
