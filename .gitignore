@@ -7,3 +7,8 @@ node_modules/
 out/
 *.log
 .env*.local
+
+# OS metadata
+desktop.ini
+Thumbs.db
+.DS_Store
