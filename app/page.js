@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 
 export default function Home() {
   return (
@@ -12,10 +13,10 @@ export default function Home() {
       <Nav />
       <Hero />
       <main>
-        <About />
-        <Skills />
-        <Experience />
-        <Contact />
+        <Reveal><About /></Reveal>
+        <Reveal><Skills /></Reveal>
+        <Reveal><Experience /></Reveal>
+        <Reveal><Contact /></Reveal>
       </main>
       <Footer />
     </>
