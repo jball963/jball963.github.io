@@ -4,6 +4,14 @@ import { useEffect, useRef, useState } from "react";
 
 const MAX_OFFSET = 80;
 
+// Active slide range, expressed as fractions of viewport height (rect.top / vh).
+// - At/above SLIDE_START: section stays fully off-side (factor 1).
+// - At/below SLIDE_END: section is fully in place (factor 0).
+// Tighter range = wait longer, then snap into place faster.
+const SLIDE_START = 0.7;
+const SLIDE_END = 0.2;
+const SLIDE_RANGE = SLIDE_START - SLIDE_END;
+
 export default function Reveal({ children, from = "left" }) {
   const ref = useRef(null);
   const [offset, setOffset] = useState(MAX_OFFSET);
@@ -20,12 +28,8 @@ export default function Reveal({ children, from = "left" }) {
     const compute = () => {
       const rect = node.getBoundingClientRect();
       const vh = window.innerHeight;
-      // factor = 1 when the section's top is at/below the viewport bottom
-      //          (section is fully below the fold → fully off-screen side).
-      // factor = 0 when the section's top is at/above the viewport top
-      //          (section has reached or scrolled past the top → fully in place).
-      // Linear interpolation between.
-      const factor = Math.max(0, Math.min(1, rect.top / vh));
+      const t = rect.top / vh;
+      const factor = Math.max(0, Math.min(1, (t - SLIDE_END) / SLIDE_RANGE));
       setOffset(MAX_OFFSET * factor);
     };
 
