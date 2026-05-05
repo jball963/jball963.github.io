@@ -236,6 +236,14 @@ body {
   border-bottom-color: var(--color-accent);
 }
 
+/* ─── About credential line ─── */
+.about-credential {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
 /* ─── Skills chips ─── */
 .skills-list {
   list-style: none;
