@@ -25,6 +25,15 @@ const PRIMARY_GROUPS = [
       "MVVM pattern",
     ],
   },
+  {
+    title: "AI-Assisted Development",
+    items: [
+      "Claude Code",
+      "Project planning",
+      "Issue triage",
+      "Release management",
+    ],
+  },
 ];
 
 const LEGACY_ITEMS = ["Azure", "Azure SQL", "Firebase Hosting", "Cloudflare (DNS)"];

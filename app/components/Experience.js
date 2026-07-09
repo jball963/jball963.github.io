@@ -12,6 +12,8 @@ const ROLES = [
       "Migrated legacy clocking data from proprietary .cfg/.dat file storage into SQL Server, converting up to 8 years of historical records and 20,000+ rows per large client into a structured relational database.",
       "Independently managed the full cloud infrastructure lifecycle. Deployed initially on Firebase Hosting with Azure SQL, then re-architected onto DigitalOcean with Cloudflare for DNS, reducing complexity and consolidating hosting costs.",
       "Integrated applications with SQL Server and Azure SQL databases; designed schemas supporting data validation, audit tracking, and multi-year transactional history.",
+      "Fielded support calls and maintained the company's primary point-of-sale codebase, diagnosing and resolving minor bugs to keep client systems running smoothly.",
+      "Manage project planning, issue triage, and release coordination across both production systems, using Claude Code as an integrated part of the workflow to keep development organized and moving efficiently.",
       "Self-directed adoption of Git/GitHub workflows, cloud services, and deployment pipelines with no formal onboarding or mentorship.",
     ],
   },
